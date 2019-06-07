@@ -1,6 +1,2 @@
-[submodule "themes/ezhil"]
-	path = themes/ezhil
-	url = https://github.com/vividvilla/ezhil.git
 [submodule "themes/minimal-bootstrap-hugo-theme"]
 	path = themes/minimal-bootstrap-hugo-theme
-	url = https://github.com/zwbetz-gh/minimal-bootstrap-hugo-theme.git
