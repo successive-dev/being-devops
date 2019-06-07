@@ -1,4 +1,4 @@
-baseURL = "https://friendly-bardeen-5efdcd.netlify.com/"
+baseURL = "https://being-devops.netlify.com/"
 languageCode = "en-us"
 title = "Being Devops"
 theme = "minimal-bootstrap-hugo-theme"

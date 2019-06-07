@@ -32,4 +32,4 @@ HUGO_ENABLEGITINFO = "true"
 [build.environment]
 HUGO_VERSION = "0.54.0"
 HUGO_THEME = "minimal-bootstrap-hugo-theme"
-HUGO_BASEURL = "https://friendly-bardeen-5efdcd.netlify.com"
+HUGO_BASEURL = "https://being-devops.netlify.com"
