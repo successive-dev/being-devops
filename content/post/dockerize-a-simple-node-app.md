@@ -8,12 +8,12 @@ Today, I am gonna show you how to dockerize a node.js application. Firstly I am 
 
 ### First, lets create a simple node.js application
 
-So you can quicky setup a very simple helloWorld node app by running following commands in terminal.
-    
-```shell 
-$ git clone https://github.com/successive-dev/nodejs_helloworld.git
-$ cd nodejs_helloworld
-$ node helloworld.js
+So you can quickly setup a very simple helloWorld node app by running following commands in terminal.
+
+```shell
+$git clone https://github.com/successive-dev/nodejs_helloworld.git
+$cd nodejs_helloworld
+$node helloworld.js
 ```
 
 Head over to [localhost:3000](http://localhost:3000) in your browser to check if its working.
@@ -48,8 +48,10 @@ CMD [ "node", "helloworld.js" ]
 ### Build and Run the image
 
 Run the following commands to build image and run it.
-```bash 
-$ docker build -t helloworld . # docker build -t [image_name] [path_to_Dockerfile] : to build image
-$ docker run -d -p 3000:3000 helloworld # docker run -d -p [host_machine_port:container_port] [image_name]
+
+```bash
+$docker build -t helloworld . # docker build -t [image_name] [path_to_Dockerfile] : to build image
+$docker run -d -p 3000:3000 helloworld # docker run -d -p [host_machine_port:container_port] [image_name]
 ```
+
 Go to [localhost:3000](http://localhost:3000) in your browser and you should see Hello World! message.
