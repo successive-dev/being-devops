@@ -45,6 +45,8 @@ CMD [ "node", "helloworld.js" ]
 # Setting up the entry point, this command will execute when container is created and is running
 ```
 
+### Build and Run the image
+
 Run the following commands to build image and run it.
 ```bash 
 $ docker build -t helloworld . # docker build -t [image_name] [path_to_Dockerfile] : to build image
