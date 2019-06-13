@@ -20,7 +20,7 @@ Head over to [localhost:3000](http://localhost:3000) in your browser to check if
 
 ### Creating a Dockerfile
 
-Dockerfile is a layout of image. It tells what things to go inside an image etc. The above Dockerfile is a very simple one. Let me explain what it is doing at each step.
+Dockerfile is a layout of image. It tells what things to go inside an image etc. The below Dockerfile is a very simple one. Let me explain what it is doing at each step.
 
 ```Dockerfile
 FROM node:current-alpine
