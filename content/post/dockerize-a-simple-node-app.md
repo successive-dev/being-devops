@@ -50,8 +50,10 @@ CMD [ "node", "helloworld.js" ]
 Run the following commands to build image and run it.
 
 ```bash
-$docker build -t helloworld . # docker build -t [image_name] [path_to_Dockerfile] : to build image
-$docker run -d -p 3000:3000 helloworld # docker run -d -p [host_machine_port:container_port] [image_name]
+$docker build -t helloworld .
+# docker build -t [image_name] [path_to_Dockerfile] : to build image
+$docker run -d -p 3000:3000 helloworld
+# docker run -d -p [host_machine_port:container_port] [image_name]
 ```
 
 Go to [localhost:3000](http://localhost:3000) in your browser and you should see Hello World! message.
