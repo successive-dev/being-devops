@@ -2,6 +2,8 @@
 title: "Install Openalpr Guide"
 date: 2019-07-16T11:34:13+05:30
 draft: false
+tags: ["openalpr","installation","ubuntu","fedora", "linux", "docker"]
+
 ---
 
 Openalpr a fantastic piece of technology leveraging the use of neural networks and machine learning, and above all its open source means you can play with it, convert it into a meaningful product, etc.
