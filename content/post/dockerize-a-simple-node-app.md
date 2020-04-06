@@ -4,8 +4,6 @@ date: 2019-06-07T10:17:45+05:30
 draft: false
 tags: ["docker","container","node","app"]
 ---
-{{ .Title }}
-{{ $address }}
 Today, I am gonna show you how to dockerize a node.js application. Firstly I am going to create a basic node app and then write the Dockerfile to create the image of the application.
 
 ### First, lets create a simple node.js application
