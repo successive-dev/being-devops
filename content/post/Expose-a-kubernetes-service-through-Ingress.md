@@ -11,9 +11,9 @@ Let's dive right into it.
 
 ## Terms
 
-- **Ingress** is a kubernetes api object that defines rules to map incoming traffic to backend services.
-- **Ingress controller** watches over ingress, reads the rules, and implements them by acting as reverse proxy system.
-- **Reverse Proxy system** is basically something that sits in front of services and queries them on client behalf.
+- **Ingress** is a kubernetes API object that defines rules to map incoming traffic to backend services.
+- **Ingress controller** watches over ingress, reads the rules, and implements them by acting as a reverse proxy system.
+- **Reverse Proxy system** is basically something that sits in front of services and queries them on the client's behalf.
 
 ## Creating a dummy Service
 
@@ -73,7 +73,7 @@ The next part can be a little confusing so better I explain how things are gonna
 
 {{< mermaid >}}
 
-It's important to understand the use of ingress-controller here. What's happening is that user will hit ingress-controller (through some client like chrome or curl). Ingress-controller also keeps observing kubernetes Ingress resource all the time and therefore it knows all the ingress rules. Based on that rules, it will decide which service to fetch the data from and then returns it back to client. This behaviour is also known as reverse-proxying that-is retrieving resources on behalf of client from one or more back-ends.
+It’s important to understand the use of the ingress-controller here. What’s happening is that the user will hit ingress-controller (through some client like chrome or curl). Ingress-controller also keeps observing kubernetes Ingress resource all the time and therefore it knows all the ingress rules. Based on those rules, it will decide which service to fetch the data from and then returns it back to the client. This behavior is also known as reverse-proxying that-is retrieving resources on behalf of a client from one or more back-ends.
 
 ## Exposing the service through ingress
 
@@ -86,11 +86,11 @@ nginx-ingress-controller        LoadBalancer   10.0.85.102    23.101.65.225
 nginx-ingress-default-backend   ClusterIP      10.0.123.59    <none>
 ```
 
-We are only interested in `nginx-ingress-controller` service right now. Notice that it is of type `LoadBalancer` which makes total sense because as I mentioned earlier a user should be able hit ingress-controller from outside the cluster and that's possible only when the associated service is of type LoadBalancer.
+We are only interested in the `nginx-ingress-controller` service right now. Notice that it is of type `LoadBalancer` which makes total sense because as I mentioned earlier a user should be able to hit ingress-controller from outside the cluster and that's possible only when the associated service is of type LoadBalancer.
 
-Now, it's your task to get a name(DNS) for the external ip of `nginx-ingress-controller` which in my case is `23.101.65.225`. Getting a DNS is like not 100% necessary, you can simply hit the ip, but I would still suggest to get a DNS and you can some dns'es for free on internet. Now let's say you got a dns name `www.goku.ez`.
+Now, it's your task to get a name(DNS) for the external IP of `nginx-ingress-controller` which in my case is `23.101.65.225`. Getting a DNS is like not 100% necessary, you can simply hit the IP, but I would still suggest getting a DNS and you can some DNS'es for free on the internet. Now let's say you got a DNS name `www.goku.ez`.
 
-Its time to create the ingress. Copy the below code in a yaml in your system and execute it with kubectl command.
+Its time to create the ingress. Copy the below code in a YAML in your system and execute it with kubectl command.
 
 ```yaml
 # ingress.yaml
@@ -123,6 +123,6 @@ what this rule says is - anyone coming to `goku.ez` at path `/` will be redirect
     servicePort: 80
 ```
 
-and this would mean anyone visting `goku.ez` at path `/profile` which is basically this url `goku.ez/profile`, it will be redirected to `profileresolver` service.
+and this would mean anyone visiting `goku.ez` at path `/profile` which is this URL `goku.ez/profile`, it will be redirected to `profileresolver` service.
 
 Head over to goku.ez and see ingress doing magic for you.
