@@ -40,7 +40,7 @@ theme = "minimal-bootstrap-hugo-theme"
   url = "/tags/"
   weight = 2
   [[menu.nav]]
-  name = "About"
+  name = "About Me"
   url = "/about/"
   weight = 3
   [[menu.nav]]
