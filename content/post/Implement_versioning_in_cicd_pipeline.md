@@ -7,9 +7,7 @@ draft: false
 tags: ["semver", "semantic-versioning", "cicd", "pipeline", "git"]
 ---
 
-To implement this we will leverage open\-source. I found an open\-source tool that can help us to implement versioning in the ci/cd pipelines. 
-
- This is the GitHub repo which we are going to use \- [https://github.com/screwdriver\-cd/gitversion](https://github.com/screwdriver-cd/gitversion). Binary of the tool can be downloaded from releases page in the repo. 
+This is the tool which we are going to use \- [https://github.com/screwdriver\-cd/gitversion](https://github.com/screwdriver-cd/gitversion). Binary of the tool can be downloaded from releases page in the repo. 
 
 This is a very simpleton tool \- what it does is reads the current git tag \(locally from .git folder, and yes it obviously works with git\) and can bump the major, minor or patch bit of the tag based on the last commit message. Please read about semantic versioning document if major, minor and patch doesn't make. This doesn't strictly follow semantic versioning rules but yeah it works on tag with format \- [xxx.xxx.xxx](http://xxx.xxx.xxx)
 
